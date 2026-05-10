@@ -46,4 +46,40 @@ Models were evaluated using:
 - Precision → how many predicted spam messages were actually spam
 - Recall → how many actual spam messages were detected
 - F1 Score → balance between precision and recall
-- Confusion matrix->Used to evaluate model predictions by comparing actual and predicted values
+- Confusion matrix->Used to evaluate model predictions by comparing actual and predicted values### Best Model: Naive Bayes
+## Results
+
+Out of all the models, Naive Bayes performed the best overall.
+
+F1 Score: 0.94  
+Accuracy: 98.38%  
+Precision: 98.61%  
+Recall: ~89.87%  
+
+It provides a good balance between precision and recall. It rarely classifies normal messages as spam, which means very low false positives. At the same time, it is able to detect most spam messages effectively.
+
+### Other Models
+
+#### SVM and Random Forest
+Both SVM and Random Forest showed very similar performance.
+
+F1 Score: ~0.93  
+Accuracy: ~98.2%  
+
+They maintain a good balance between detecting spam and avoiding false alarms, making them strong alternatives.
+
+#### Logistic Regression
+Precision: 98.43%  
+Recall: 79.75%  
+
+Logistic Regression gives reliable predictions when it labels a message as spam. However, it misses more spam messages compared to other models.
+
+#### Decision Tree
+F1 Score: ~0.88  
+
+Decision Tree performed lower than the other models and was less consistent in classification.
+
+### Conclusion
+Naive Bayes turned out to be the best model for this task. SVM and Random Forest also performed well and can be considered good alternatives. Logistic Regression is very precise but misses more spam messages, while Decision Tree showed the least performance.
+
+This shows that Naive Bayes works especially well for text-based classification problems like spam detection.
